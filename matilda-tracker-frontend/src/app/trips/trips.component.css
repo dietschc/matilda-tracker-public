@@ -1,0 +1,105 @@
+/* HeroesComponent's private CSS styles */
+.trips {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 17em;
+}
+
+input {
+  display: block;
+  font-size: 1em;
+  padding: .5rem;
+  margin: 1rem 0;
+  box-sizing: border-box;
+  border: 3px solid #C8B6FF;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input:focus {
+  border: 3px solid #BBD0FF;
+}
+
+input[type="radio"] {
+  display: inline;
+  margin-right: 10px;
+}
+
+.trips li {
+  position: relative;
+  cursor: pointer;
+}
+
+.trips li:hover {
+  left: .1em;
+}
+
+.trips a {
+  color: #333;
+  text-decoration: none;
+  background-color: #E7C6FF;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+}
+
+.trips a:hover {
+  color: #2c3a41;
+  background-color: #BBD0FF;
+}
+
+.trips a:active {
+  background-color: #525252;
+  color: #fafafa;
+}
+
+.trips .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #C8B6FF;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  min-width: 16px;
+  text-align: right;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+.add-button {
+ padding: .5rem 1.5rem;
+ font-size: 1rem;
+ margin-bottom: 2rem;
+ background-color: #E7C6FF;
+}
+
+.add-button:hover {
+  color: white;
+  background-color: #BBD0FF;
+}
+
+button.delete {
+  position: absolute;
+  left: 245px;
+  top: 5px;
+  background-color: #FFD6FF;
+  color:  #525252;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 1px 10px 3px 10px;
+}
+
+button.delete:hover {
+  background-color: #B8C0FF;
+  color: white;
+}

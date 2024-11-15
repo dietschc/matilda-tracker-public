@@ -1,0 +1,9 @@
+<h2>Recent 💩 Trips</h2>
+<div class="trips-menu">
+  <a *ngFor="let trip of trips"
+  routerLink="/detail/{{trip.tripId}}">
+    {{trip.tripName}}
+    <br>
+    {{didPoop(trip.hasPooped)}}
+  </a>
+</div>

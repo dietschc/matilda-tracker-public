@@ -1,0 +1,37 @@
+/* TripDetailComponent's private CSS styles */
+label {
+    color: #B8C0FF;
+    font-weight: bold;
+}
+input {
+  font-size: 1em;
+  padding: .5rem;
+  border: 3px solid #C8B6FF;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input:focus {
+  border: 3px solid #BBD0FF;
+}
+input[type="radio"] {
+  display: inline;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+button {
+  margin-top: 20px;
+  background-color: #E7C6FF;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #BBD0FF;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

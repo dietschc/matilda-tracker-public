@@ -1,0 +1,34 @@
+<h2>💩 Log:</h2>
+
+<div *ngIf="trips.length >= 1 ">
+  <label for="new-trip">Trip time: </label>
+  <input id="new-trip" #tripName value="{{ today | date : 'h:mm a EEEE' }}">
+
+  <label>
+    <input type="radio" name="has-pooped" value="true" (change)="hasPooped = 'true'" checked> 💩
+  </label>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <label>
+    <input type="radio" name="has-pooped" value="false" (change)="hasPooped = 'false'"> 😢
+  </label>
+
+  <br>
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(
+    tripName.value, stringToBoolean(hasPooped)); 
+    tripName.value=''; 
+  ">
+      Add trip
+  </button>
+</div>
+
+<ul class="trips">
+  <li *ngFor="let trip of trips">
+    <a routerLink="/detail/{{trip.tripId}}">
+      <span class="badge">{{trip.tripId}}</span> {{trip.tripName}} {{didPoop(trip.hasPooped)}}
+    </a>
+    <button type="button" class="delete" title="delete trip"
+  (click)="delete(trip)">x</button>
+  </li>
+</ul>

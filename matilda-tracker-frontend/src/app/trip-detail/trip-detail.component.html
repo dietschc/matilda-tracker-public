@@ -1,0 +1,21 @@
+<div *ngIf="trip">
+
+    <h2>{{trip.tripName | uppercase}} Details</h2>
+    <div><span>tripId: </span>{{trip.tripId}}</div>
+    <div>
+      <label for="trip-tripName">💩 time: </label>
+      <input tripId="trip-tripName" [(ngModel)]="trip.tripName" placeholder="tripName">
+      <br>
+
+      <label>
+        <input type="radio" name="has-pooped" [value]="true" [(ngModel)]="trip.hasPooped"> 💩
+      </label>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <label>
+        <input type="radio" name="has-pooped" [value]="false" [(ngModel)]="trip.hasPooped"> 😢
+      </label>
+
+    </div>
+    <button type="button" (click)="goBack()">go back</button>
+    <button type="button" (click)="save()">save</button>
+  </div>
